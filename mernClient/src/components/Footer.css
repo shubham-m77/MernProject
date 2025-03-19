@@ -1,0 +1,12 @@
+.upper-section{background-color: #2176ff;color:white;}
+.second-section{background-color: #001e4f;color:white;}
+.footer-container a{border:none;text-decoration: none;color: white;}
+.footer-container a:hover{color:#ff9f04;}
+a{border:none;text-decoration: none;}
+footer h6{text-align: center;padding:1rem;color:white;font-weight: 400;margin-bottom: 0;}
+.second-section p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+.copyright-dtl{background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);}

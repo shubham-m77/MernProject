@@ -1,0 +1,333 @@
+/* Signup/signin Page */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+/* Styling the scrollbar itself */
+body::-webkit-scrollbar{
+  width: 10px;          /* Set width of the scrollbar */
+  height: 6px;         /* Set height for horizontal scrollbar */
+}
+/* Styling the track (background of the scrollbar) */
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);  
+
+}
+
+/* Styling the draggable part of the scrollbar */
+body::-webkit-scrollbar-thumb{
+  background: #deebff;        /* Medium grey color */
+  border-radius: 10px;     /* Rounded corners for the thumb */
+  border: 2px solid transparent; /* Optional transparent border */
+}
+
+/* Hover effect on the thumb (when user is interacting with scrollbar) */
+body::-webkit-scrollbar-thumb:hover {
+  background: #2176ff;        /* Darker grey when hovered */
+}
+
+/* Optional: Styling the corners where scrollbars meet */
+body::-webkit-scrollbar-corner{
+  background: #f1f1f1;    /* Light grey color for the corner */
+}
+.register-img img,.login-img img{width:85%;}
+.reg-form label,.login-form label{color:white;}
+.signup-btn{font-weight: 500;width: 35%;}
+.sign-semi-btn{background-color: rgb(0, 51, 255);border-radius: 5px;color: white;}
+.sign-semi-btn:hover{background-color: rgb(0, 35, 177);transition: 0.2s linear;}
+.reg-login-btn-text{font-size:14px;}
+.login-section{margin-top:-1rem;}
+/* 
+homepage */
+.container{padding:2.5rem 2.5rem ;}
+.container{
+    & .row{align-items: center;}
+}
+.box-border{border-color:#2176ff;border-width:0.18rem;opacity: 1;width: 50%;margin-top:-0.5rem;}
+
+*{box-sizing: border-box; }
+body{box-sizing: border-box;overflow-x: hidden;background-image: url("./pages/images/black-abstract-bg.jpg");background-repeat: no-repeat;background-size:cover;cursor: url('pages/images/arrowhead-rounded-outline.svg'), auto;}
+.homepage-img{width:90%;float: right;}
+.section-row{margin-top:-4rem;}
+.hero-content h1{color: #f3f9fe;font-size:2.6rem;font-weight: 600;}
+.hero-content h5{color: #e8f5ff;font-weight: 400;}
+.home-username{font-weight:500;color: #2176ff;}
+.hero-content p{color: #e4f2ff;font-size:1.02rem;}
+.learn-more-btn{border:solid 1.5px #2176ff;font-weight: 500;}
+.contact-us-btn{background-color:#2176ff;font-weight: 500;}
+.contact-us-btn:hover{background-color:#0043b0;transition: linear 0.25s;}
+.learn-more-btn:hover{background-color: #2176ff;transition: linear 0.25s;}
+
+.skills-highlights{background-color: #e5f3fe;border-radius: 10px;margin-top: 2rem;}
+.skills-highlights:hover{box-shadow: 0 0 10px #ccc;transition: 0.25s linear;}
+.skills-highlights .main-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .skills-highlights .skill-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+
+
+.skills-highlights .skill-col p{font-size: 14px;font-weight: 500;color: #676767;margin-bottom: 0;margin-top:-0.4rem;}
+.skills-highlights .skill-col h3{font-weight: 600;color: #2176ff;}
+/* 
+About Page */
+.about-img{width:80%;float: left;}
+/* .about-us-content{margin-top: ;} */
+.about-us-content h1{color: #f3f9fe;font-size:2.6rem;font-weight: 600;}
+.about-us-content h5{color: #e8f5ff;font-weight: 400;}
+.about-us-content p{color: #e4e6e9;font-size:1.02rem;font-weight: 350;padding: 0.5rem 0.75rem; border-radius: 5px;}
+.about-us-content p:hover{outline:solid 1px #e4f5ff;transition: ease-in-out 0.25s;box-shadow: 0 0 6px #e4f5ff;}
+.about-us-content p h6{font-weight: 500;color: #e4f5ff;}
+.about-container{padding:2.5rem 6rem ;}
+.about-container{
+    & .row{align-items: center;margin-top: -2rem;}
+}
+.about-page .skills-highlights{margin:2.5rem 6rem ;margin-top:-0.6rem;}
+
+
+
+/* COntact Page */
+.contact-container{padding:2.5rem 6rem ;}
+.contact-container{
+    & .row{align-items: center;margin-top: -1rem;}
+}
+.contact-container .contact-form{width: 95%;}
+
+.secondary-row .col-6 {
+  width: 50%;
+}
+.success-message {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  color: rgb(22, 187, 0);
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 3s ease-in-out;
+  z-index: 1000;
+}
+/* 🌍 Mobile Optimization */
+@media (max-width: 768px) {
+  .success-message {
+    top:50%;
+    font-size: 15px; /* Reduce text size for small screens */
+    padding: 10px 20px;/* Adjust padding */
+    border-radius: 25px;
+  }
+
+
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -60%); }
+  20% { opacity: 1; transform: translate(-50%, -50%); }
+  80% { opacity: 1; transform: translate(-50%, -50%); }
+  100% { opacity: 0; transform: translate(-50%, -60%); }
+}
+
+
+#message-box,#contact-email,#contact-username{background: inherit;background-color: rgba(0, 0, 0, 0.5);border: none;border-bottom: 0.75px solid #fff;
+  backdrop-filter: blur(10px);color: rgb(224, 222, 222);}
+/* homepage resopnsive */
+@media (max-width:768px){
+  .hero-content {
+  margin-top: 3rem;}
+.homepage-img{width:100%;float: none;}
+.secondary-row .col-6 {
+  width: 100%;
+}
+}
+
+/* Login Page Responsive */
+@media (max-width:768px){
+  .register-img img, .login-img img {
+    width: 100%;
+}
+.signup-btn{font-weight: 500;width: 70%;}
+.login-section{margin-top:-5rem;}
+.reg-login-btn-text {
+  font-size: 12px;
+}
+.register-section.row {
+  margin-top: -2rem;
+}
+}
+
+/* about responsive */
+@media (max-width:768px){
+.about-img {
+  width: 100%;}
+  .about-container {
+    padding: 1.5rem 2rem;
+}
+.skills-highlights{margin-top:3rem;}
+.secondary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0;
+}
+.about-page .col-6 {
+  flex: 1 1 48%; /* 2 items per row in the secondary row */
+}
+.about-page .col-md-6 {
+  flex: 1 1 48%; /* 2 columns on medium and above screens */
+}
+
+/* about page responsive */
+.about-page .skills-highlights {
+  margin: 1rem 2rem;
+}
+.about-us-content p {
+  background: rgb(91 104 109 / 50%);
+  backdrop-filter: blur(50px);
+  padding: 1rem 1rem;
+  border-radius: 5px;
+}
+}
+
+
+/* Contact us responsive */
+@media (max-width:768px){
+  .contact-img {
+    width: 100%;}
+    .contact-container {
+      padding: 1.5rem 2rem;
+  }
+  .contact-container .contact-form {
+    width: 100%;
+}
+iframe.google-location {
+  height: 40vh;
+}
+}
+
+/* Service Page */
+.service-header{width:15rem;}
+.service-header .box-border{margin-top: -0.75rem;}
+.services-container{padding:2.5rem 6rem ;}
+.service-list{padding:1rem 2.5rem ;}
+/* .service-list .card{
+ align-items: center;
+} */
+.service-list .card {
+  color: white;
+  /* border: solid 1.5px #ccc; */
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+ 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, box-shadow;
+  /* cursor: url('pages/images/hand-pointer.svg'), auto; */
+}
+button, a, .learn-more-btn, .contact-us-btn, .btn { cursor: url('pages/images/hand-pointer.svg'), pointer !important; }
+.service-list .card .card-details .service-price{color:rgb(123, 255, 0);font-weight: 600;}
+.service-list .card .card-details p{color:#cecece;}
+@media (max-width:800px){
+  .services-container{padding: 1.5rem 2rem;}
+  .service-list{padding:0;}
+  .service-list .card{margin-top:1rem;}
+}
+
+.toastBody{font-family:urbanist ;}
+
+/* Admin-controller */
+/* .users-container{padding: 2rem 6rem;} */
+.users-container .box-border{width:25%;}
+.table{border-radius:5px;border:none;}
+.table-responsive{border-radius: 0.2rem;border: none;}
+.table .btn:hover{transform: scale(0.95);transition: transform 0.15s ease-in-out;}
+.table-responsive thead{border-bottom: 2px solid #343434;}
+.table-responsive tr:hover{outline: 2px solid #2176ff;transition: 0.25s linear;outline-offset: -2px;}
+.update-container{justify-content: center;align-items: center;display: flex;padding-bottom: 2rem;}
+.update-form{width:40%;}
+table a{text-decoration: none;color:white;border: none;}
+/* Styling the main container with scrollable content */
+.users-container {
+  padding: 2rem 6rem;    /* Optional padding */
+}
+
+/* Styling for table container */
+.table-responsive {
+  max-height: 400px;
+  overflow-y: auto;    /* Scrollbar inside table container */
+}
+.contact-head{z-index:-1;}
+
+/* Styling the scrollbar itself */
+.users-container::-webkit-scrollbar,
+.table-responsive::-webkit-scrollbar {
+  width: 8px;          /* Set width of the scrollbar */
+  height: 8px;         /* Set height for horizontal scrollbar */
+}
+/* Styling the track (background of the scrollbar) */
+.users-container::-webkit-scrollbar-track,
+.table-responsive::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);  /* Light grey background for the track */
+
+}
+
+/* Styling the draggable part of the scrollbar */
+.users-container::-webkit-scrollbar-thumb,
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #888;        /* Medium grey color */
+  border-radius: 10px;     /* Rounded corners for the thumb */
+  border: 2px solid transparent; /* Optional transparent border */
+  
+}
+
+/* Hover effect on the thumb (when user is interacting with scrollbar) */
+.users-container::-webkit-scrollbar-thumb:hover,
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #ff9f04;        /* Darker grey when hovered */
+}
+
+/* Optional: Styling the corners where scrollbars meet */
+.users-container::-webkit-scrollbar-corner,
+.table-responsive::-webkit-scrollbar-corner {
+  background: #f1f1f1;    /* Light grey color for the corner */
+}
+
+.confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width:50%;
+  background: white;
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content button {
+  margin: 5px;
+  width:50%;
+}

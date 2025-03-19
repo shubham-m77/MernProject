@@ -11,7 +11,7 @@ const AdminUsers = () => {
   
 const usersData=async()=>{
   try {
-    const response=await fetch("http://localhost:2000/admin/users",{
+    const response=await fetch(`${process.env.SERVER_URL}/api/admin/users`,{
       method:"GET",
       headers:{
         "Authorization":authToken
@@ -30,7 +30,7 @@ useEffect(()=>{
 // Deleting the user
 const deleteUser= async(id)=> {
   try {
-    const response=await fetch(`http://localhost:2000/admin/users/delete/${id}`,{
+    const response=await fetch(`${process.env.SERVER_URL}/api/admin/users/delete/${id}`,{
       method:"DELETE",
       headers:{
         "Authorization":authToken

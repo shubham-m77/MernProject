@@ -17,7 +17,7 @@ const AdminUpdate = () => {
         // getting singleUser Data
         const getUserData= async()=> {
             try {
-              const response=await fetch(`http://localhost:2000/admin/users/${params.id}`,{
+              const response=await fetch(`${process.env.SERVER_URL}/api/admin/users/${params.id}`,{
                 method:"GET",
                 headers:{
                   "Authorization":authToken
@@ -49,7 +49,7 @@ const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
     try {
-    const response=await fetch(`http://localhost:2000/admin/users/update/${params.id}`,{
+    const response=await fetch(`${process.env.SERVER_URL}/api/admin/users/update/${params.id}`,{
           method:"PATCH",
           headers:{
             "Content-Type": "application/json",

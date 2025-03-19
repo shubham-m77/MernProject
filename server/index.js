@@ -20,10 +20,10 @@ app.use(cors(corsOptions));
 app.use(errorMiddleware);
 app.use(express.json());
 
-app.use("/auth",authRouter);
-app.use("/auth",serviceRouter);
-app.use("/form",contactRouter);
-app.use("/admin",adminRouter);
+app.use("/api/auth",authRouter);
+app.use("/api/auth",serviceRouter);
+app.use("/api/form",contactRouter);
+app.use("/api/admin",adminRouter);
 app.get('/',(req,res)=>{
 res.send("<h1>Radha Radha</h1>");
 });

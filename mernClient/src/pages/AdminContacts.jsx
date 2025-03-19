@@ -12,7 +12,7 @@ const AdminContacts = () => {
 
   const contactData = async () => {
     try {
-      const response = await fetch("http://localhost:2000/admin/contacts", {
+      const response = await fetch(`${process.env.SERVER_URL}/api/admin/contacts`, {
         method: "GET",
         headers: {
           "Authorization": authToken
@@ -32,7 +32,7 @@ const AdminContacts = () => {
   // Handle delete
   const deleteContact = async (id) => {
     try {
-      const response = await fetch(`http://localhost:2000/admin/contacts/delete/${id}`, {
+      const response = await fetch(`${process.env.SERVER_URL}/api/admin/contacts/delete/${id}`, {
         method: "DELETE",
         headers: {
           "Authorization": authToken

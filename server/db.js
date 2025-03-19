@@ -1,16 +1,26 @@
-const mongoose=require("mongoose");
-const URI = "mongodb+srv://shubham_m9022:Shubham123@shubhcluster.qcpc6.mongodb.net/register?retryWrites=true&w=majority&appName=ShubhCluster";
-// require("dotenv").config();
-// const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
+const mongoose = require("mongoose");
+require("dotenv").config();
 
-const connectDB= async()=>{
-    try {
-     await mongoose.connect(URI);
-    //  await mongoose.connection.db.admin().command({ ping: 1 });
-     console.log("Connection established");
-    } catch (error) {
-        console.error("Database connection failed",error);
-        process.exit();
-    }
-}
-module.exports=connectDB;
+const connectDB = async () => {
+  try {
+    // MongoDB connection options
+    const options = {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      // Optionally, add more options like SSL if required
+    };
+
+    // Connecting to MongoDB
+    await mongoose.connect(process.env.MONGODB_URI, options);
+    
+    // Optional: Ensure the connection is successful
+    // await mongoose.connection.db.admin().command({ ping: 1 });
+
+    console.log("Database connection established");
+  } catch (error) {
+    console.error("Database connection failed", error);
+    process.exit(1); // Exit the process if database connection fails
+  }
+};
+
+module.exports = connectDB;

@@ -5,13 +5,13 @@
   "scripts": {
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"No build step defined\""  
+    "build": "echo \"No build step defined\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
@@ -22,9 +22,7 @@
     "zod": "^3.24.1"
   },
   "description": "",
-
   "engines": {
-  "node": "16.x"
+    "node": "18.x"
   }
-  
 }

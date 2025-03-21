@@ -1,6 +1,6 @@
 const mongoose=require("mongoose");
-const bcrypt = require('bcrypt');
-const JWT_KEY="THEUNKNOWNTRUTHISUNKNOWNLIE";
+const bcrypt = require('bcryptjs');
+require("dotenv").config();
 const jwt = require('jsonwebtoken');
 const userSchema =new mongoose.Schema({
     username:{
@@ -49,7 +49,7 @@ try {
     return jwt.sign({userId:this._id.toString(),
         email:this.email,
         isAdmin:this.isAdmin},
-    JWT_KEY,{
+    process.env.JWT_KEY,{
         expiresIn:"7d"
     });
 } catch (error) {

@@ -178,10 +178,10 @@ About Page */
   gap: 20px;
   padding: 10px 0;
 }
-.about-page .col-6 {
+.about-page  .skills-highlights .col-6 {
   flex: 1 1 48%; /* 2 items per row in the secondary row */
 }
-.about-page .col-md-6 {
+.about-page .skills-highlights .col-md-6 {
   flex: 1 1 48%; /* 2 columns on medium and above screens */
 }
 

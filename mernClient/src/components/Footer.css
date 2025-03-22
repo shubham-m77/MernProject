@@ -7,6 +7,7 @@ footer h6{text-align: center;padding:1rem;color:white;font-weight: 400;margin-bo
 .second-section p {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
+    padding: 0rem 2rem;
 }
 .copyright-dtl{background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);}

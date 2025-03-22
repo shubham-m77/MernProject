@@ -5,8 +5,7 @@ const connectDB = async () => {
   try {
     // MongoDB connection options
     const options = {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+      useNewUrlParser: true
       // Optionally, add more options like SSL if required
     };
 

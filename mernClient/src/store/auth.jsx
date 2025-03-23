@@ -72,25 +72,14 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-<<<<<<< HEAD
-=======
-  // useEffect for token change: fetch user data and services when Token changes
->>>>>>> b02bed9a19a146372188b0dc0fbc980b7e15de7a
   useEffect(() => {
     if (Token) {
       userAuthentication(); 
     } else {
-<<<<<<< HEAD
       setUserData(null); 
     }
     serviceFetch(); 
   }, [Token]); 
-=======
-      setUserData(null); // Clear user data if Token is removed (logged out)
-    }
-    serviceFetch(); // Fetch services whenever Token changes or when page loads
-  }, [Token]); // Dependency on Token so effect runs when Token changes
->>>>>>> b02bed9a19a146372188b0dc0fbc980b7e15de7a
 
   return (
     <AuthContext.Provider

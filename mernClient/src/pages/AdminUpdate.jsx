@@ -7,6 +7,7 @@ const AdminUpdate = () => {
       const {authToken}=useAuth();
       const navigate=useNavigate();
     //   const [data,setData]=useState("");
+    const API_URI=process.env.SERVER_URL || "https://shubh-graphix.onrender.com";
     const [data,setData]=useState({
         username:"",
         email:"",
@@ -17,7 +18,7 @@ const AdminUpdate = () => {
         // getting singleUser Data
         const getUserData= async()=> {
             try {
-              const response=await fetch(`${process.env.SERVER_URL}/api/admin/users/${params.id}`,{
+              const response=await fetch(`${API_URI}/api/admin/users/${params.id}`,{
                 method:"GET",
                 headers:{
                   "Authorization":authToken
@@ -49,7 +50,7 @@ const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
     try {
-    const response=await fetch(`${process.env.SERVER_URL}/api/admin/users/update/${params.id}`,{
+    const response=await fetch(`${API_URI}/api/admin/users/update/${params.id}`,{
           method:"PATCH",
           headers:{
             "Content-Type": "application/json",

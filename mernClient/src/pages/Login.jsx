@@ -11,6 +11,8 @@ const Login = () => {
     password: "",
   });
 
+  const API_URI=process.env.SERVER_URL || "https://shubh-graphix.onrender.com";
+
   const userHandler = (e) => {
     let name = e.target.name;
     let val = e.target.value;
@@ -26,7 +28,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`${process.env.SERVER_URL}/api/auth/login`, {
+    const response = await fetch(`${API_URI}/api/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

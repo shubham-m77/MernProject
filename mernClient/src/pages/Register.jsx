@@ -12,6 +12,8 @@ const Register = () => {
     mobile: "",
     password: "",
   });
+  const API_URI=process.env.SERVER_URL || "https://shubh-graphix.onrender.com";
+
   const navigate = useNavigate();
   const {storeTokenInLS}=useAuth();
   const userHandler = (e) => {
@@ -25,7 +27,7 @@ const Register = () => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`${process.env.SERVER_URL}/api/auth/register`, {
+    const response = await fetch(`${API_URI}/api/auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

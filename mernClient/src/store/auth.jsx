@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem("token", serverToken);
     setToken(serverToken);
   };
-
+const API_URI=process.env.SERVER_URL || "https://shubh-graphix.onrender.com";
   const authToken = `Bearer ${Token}`;
   const isLoggedIn = !!Token;
 
@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
   const userAuthentication = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch(`${process.env.SERVER_URL}/api/auth/user`, {
+      const response = await fetch(`${API_URI}/api/auth/user`, {
         method: "GET",
         headers: {
           Authorization: authToken,
@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }) => {
   // Fetch services data
   const serviceFetch = async () => {
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/api/auth/services`, {
+      const response = await fetch(`${API_URI}/api/auth/services`, {
         method: "GET",
       });
       if (response.ok) {

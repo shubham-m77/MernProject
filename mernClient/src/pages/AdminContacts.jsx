@@ -9,10 +9,12 @@ const AdminContacts = () => {
   const [contacts, setContacts] = useState([]);
   const [showConfirm, setShowConfirm] = useState(false);
   const [contactToDelete, setContactToDelete] = useState(null);
+  const API_URI=process.env.SERVER_URL || "https://shubh-graphix.onrender.com";
 
   const contactData = async () => {
+
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/api/admin/contacts`, {
+      const response = await fetch(`${API_URI}/api/admin/contacts`, {
         method: "GET",
         headers: {
           "Authorization": authToken
@@ -32,7 +34,7 @@ const AdminContacts = () => {
   // Handle delete
   const deleteContact = async (id) => {
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/api/admin/contacts/delete/${id}`, {
+      const response = await fetch(`${API_URI}/api/admin/contacts/delete/${id}`, {
         method: "DELETE",
         headers: {
           "Authorization": authToken

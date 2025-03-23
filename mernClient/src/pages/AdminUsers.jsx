@@ -8,10 +8,10 @@ const AdminUsers = () => {
   const [users,setUsers]=useState([]);
     const [showConfirm, setShowConfirm] = useState(false);
     const [userToDelete, setUserToDelete] = useState(null);
-  
+    const API_URI=process.env.SERVER_URL || "https://shubh-graphix.onrender.com";
 const usersData=async()=>{
   try {
-    const response=await fetch(`${process.env.SERVER_URL}/api/admin/users`,{
+    const response=await fetch(`${API_URI}/api/admin/users`,{
       method:"GET",
       headers:{
         "Authorization":authToken
@@ -30,7 +30,7 @@ useEffect(()=>{
 // Deleting the user
 const deleteUser= async(id)=> {
   try {
-    const response=await fetch(`${process.env.SERVER_URL}/api/admin/users/delete/${id}`,{
+    const response=await fetch(`${API_URI}/api/admin/users/delete/${id}`,{
       method:"DELETE",
       headers:{
         "Authorization":authToken

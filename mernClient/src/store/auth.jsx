@@ -60,8 +60,8 @@ const API_URI=process.env.SERVER_URL || "https://shubh-graphix.onrender.com";
       });
       if (response.ok) {
         const data = await response.json();
-        setServices(data.message);
-        console.log(data.message);
+        setServices(data.msg);
+        console.log(data.msg);
       } else {
         console.error("Failed to fetch services");
         setServices([]); // Reset services if fetch fails

@@ -12,7 +12,7 @@ const port=2000;
 
 
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: 'https://shubh-graphix-frontend.onrender.com',
   methods:"GET,POST,PUT,DELETE,PATCH,HEAD",
   Credentials:true,
 }

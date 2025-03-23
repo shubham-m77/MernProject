@@ -44,7 +44,7 @@ userSchema.methods.comparePassword=async function(password){
 return await bcrypt.compare(password,this.password);
 }
 // json web token
-userSchema.methods.generateToken=async function(){
+userSchema.methods.generateToken=function(){
 try {
     return jwt.sign({userId:this._id.toString(),
         email:this.email,

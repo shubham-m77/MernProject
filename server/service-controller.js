@@ -1,6 +1,4 @@
 const serviceModel = require("./Models/serviceModel");
-
-
 const service=async(req,res)=>{
 try {
     const response=await serviceModel.find();
@@ -8,7 +6,7 @@ try {
         console.log("No Service Data found!");
         return;
     }
-    res.status(200).json({message:response});
+    res.status(200).json({msg:response});
 
 } catch (error) {
    console.log(`Services:${error}`);

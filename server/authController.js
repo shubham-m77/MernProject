@@ -17,9 +17,6 @@ try {
     if(userExist){
        return res.status(400).json({msg:"User/Email Already Exist"});
     }
-    // password securing
-    // const saltRound=await bycrypt.genSalt(10);
-    // const hash_pass=await bcrypt.hash(password,10);
     const userCreated=await userModel.create({username,email,mobile,password});
     res.status(201).json({msg:'Registeration Success',token:await userCreated.generateToken(),userId:userCreated._id.toString()}); 
 } catch (error) {

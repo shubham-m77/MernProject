@@ -230,10 +230,8 @@ iframe.google-location {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   border: 2px solid rgba(255, 255, 255, 0.1);
- 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   will-change: transform, box-shadow;
-  /* cursor: url('pages/images/hand-pointer.svg'), auto; */
 }
 button, a, .learn-more-btn, .contact-us-btn, .btn { cursor: url('pages/images/hand-pointer.svg'), pointer !important; }
 .service-list .card .card-details .service-price{    color: #fff;

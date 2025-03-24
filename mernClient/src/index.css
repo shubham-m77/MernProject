@@ -236,7 +236,14 @@ iframe.google-location {
   /* cursor: url('pages/images/hand-pointer.svg'), auto; */
 }
 button, a, .learn-more-btn, .contact-us-btn, .btn { cursor: url('pages/images/hand-pointer.svg'), pointer !important; }
-.service-list .card .card-details .service-price{color:rgb(123, 255, 0);font-weight: 600;}
+.service-list .card .card-details .service-price{    color: #fff;
+  font-weight: 600;
+  background-color: #2176ff;
+  border-radius: 1rem;
+  width: 6.5rem;
+  padding: 0.15rem;
+  text-align: center;}
+  .service-list .card .card-details .service-price:hover{background-color: #0043b0;transition: background-color 0.2s linear;}
 .service-list .card .card-details p{color:#cecece;}
 @media (max-width:800px){
   .services-container{padding: 1.5rem 2rem;}
